@@ -12,13 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var spells: [String] = ["Spell1", "Spell2", "Spell3"]
+    var spells = Spells()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        spells.spellArray.append(SpellData(name: "spell1", description: "", soundFile: ""))
+//        tableView.reloadData()
+        
+        spells.getData {
+            DispatchQueue.main.async {                
+                self.tableView.reloadData()
+            }
+        }
     }
 
 
@@ -26,13 +35,13 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return spells.count
+        return spells.spellArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Default behaviour for tableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = spells[indexPath.row]
+        cell.textLabel?.text = spells.spellArray[indexPath.row].name
         
         return cell
     }
