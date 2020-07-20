@@ -7,6 +7,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Spell Detail View Controller-->
+        <scene sceneID="4oC-mN-Z0F">
+            <objects>
+                <viewController id="eYH-KY-5A5" customClass="SpellDetailViewController" customModule="Wand" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zA4-Dw-4yp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2un-qT-yhA">
+                                <rect key="frame" x="16" y="54" width="117" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfI-2b-hvG">
+                                <rect key="frame" x="16" y="136" width="118" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
+                                <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63P-7R-a2e">
+                                <rect key="frame" x="16" y="95" width="343" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-bw-29M">
+                                <rect key="frame" x="16" y="177" width="343" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V7p-SR-rGI" firstAttribute="trailing" secondItem="63P-7R-a2e" secondAttribute="trailing" constant="16" id="6y5-C9-7yV"/>
+                            <constraint firstItem="V7p-SR-rGI" firstAttribute="trailing" secondItem="4Rd-bw-29M" secondAttribute="trailing" constant="16" id="GhA-mU-z4S"/>
+                            <constraint firstItem="2un-qT-yhA" firstAttribute="leading" secondItem="V7p-SR-rGI" secondAttribute="leading" constant="16" id="HUu-XS-a5x"/>
+                            <constraint firstItem="4Rd-bw-29M" firstAttribute="leading" secondItem="V7p-SR-rGI" secondAttribute="leading" constant="16" id="IVm-H2-LfB"/>
+                            <constraint firstItem="63P-7R-a2e" firstAttribute="top" secondItem="2un-qT-yhA" secondAttribute="bottom" constant="8" id="JIW-Qq-1xZ"/>
+                            <constraint firstItem="63P-7R-a2e" firstAttribute="leading" secondItem="V7p-SR-rGI" secondAttribute="leading" constant="16" id="RgB-zs-DZg"/>
+                            <constraint firstItem="JfI-2b-hvG" firstAttribute="top" secondItem="63P-7R-a2e" secondAttribute="bottom" constant="8" id="ccB-gM-Pab"/>
+                            <constraint firstItem="2un-qT-yhA" firstAttribute="top" secondItem="V7p-SR-rGI" secondAttribute="top" constant="10" id="dG9-KP-RPZ"/>
+                            <constraint firstItem="4Rd-bw-29M" firstAttribute="top" secondItem="JfI-2b-hvG" secondAttribute="bottom" constant="8" id="gae-SO-dMa"/>
+                            <constraint firstItem="JfI-2b-hvG" firstAttribute="leading" secondItem="V7p-SR-rGI" secondAttribute="leading" constant="16" id="sPT-2A-mma"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V7p-SR-rGI"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="4Rd-bw-29M" id="czV-0j-wNX"/>
+                        <outlet property="nameLabel" destination="63P-7R-a2e" id="lTh-Kq-olM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAs-DI-8mB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2042.4000000000001" y="138.98050974512745"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,7 +77,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="oLe-RA-wOS" rowHeight="60" style="IBUITableViewCellStyleDefault" id="YOV-nz-0EJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="oLe-RA-wOS" rowHeight="60" style="IBUITableViewCellStyleDefault" id="YOV-nz-0EJ">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YOV-nz-0EJ" id="SvM-2b-326">
@@ -36,6 +93,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="eYH-KY-5A5" kind="show" identifier="ShowDetail" id="AhN-0H-lm5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

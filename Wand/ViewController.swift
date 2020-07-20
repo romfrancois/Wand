@@ -29,8 +29,15 @@ class ViewController: UIViewController {
             }
         }
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let destination = segue.destination as! SpellDetailViewController
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            
+            destination.spellData = spells.spellArray[selectedIndexPath.row]
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

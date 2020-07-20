@@ -16,6 +16,7 @@
 		F037AA3024C4801C00AD9CE2 /* SpellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037AA2F24C4801C00AD9CE2 /* SpellData.swift */; };
 		F037AA3224C480EB00AD9CE2 /* Spells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F037AA3124C480EB00AD9CE2 /* Spells.swift */; };
 		F037AA4F24C4820900AD9CE2 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = F037AA4E24C4820900AD9CE2 /* readme.md */; };
+		F051690924C4DAA9000D0D66 /* SpellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051690824C4DAA9000D0D66 /* SpellDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F037AA2F24C4801C00AD9CE2 /* SpellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellData.swift; sourceTree = "<group>"; };
 		F037AA3124C480EB00AD9CE2 /* Spells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spells.swift; sourceTree = "<group>"; };
 		F037AA4E24C4820900AD9CE2 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		F051690824C4DAA9000D0D66 /* SpellDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				F037AA2F24C4801C00AD9CE2 /* SpellData.swift */,
 				F037AA3124C480EB00AD9CE2 /* Spells.swift */,
 				F037AA1F24C47AA200AD9CE2 /* ViewController.swift */,
+				F051690824C4DAA9000D0D66 /* SpellDetailViewController.swift */,
 				F037AA2124C47AA200AD9CE2 /* Main.storyboard */,
 				F037AA2424C47AA200AD9CE2 /* Assets.xcassets */,
 				F037AA2624C47AA200AD9CE2 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				F037AA3024C4801C00AD9CE2 /* SpellData.swift in Sources */,
 				F037AA2024C47AA200AD9CE2 /* ViewController.swift in Sources */,
 				F037AA1C24C47AA200AD9CE2 /* AppDelegate.swift in Sources */,
+				F051690924C4DAA9000D0D66 /* SpellDetailViewController.swift in Sources */,
 				F037AA1E24C47AA200AD9CE2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
