@@ -16,31 +16,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2un-qT-yhA">
-                                <rect key="frame" x="16" y="54" width="117" height="33"/>
+                                <rect key="frame" x="16" y="106" width="117" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                 <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfI-2b-hvG">
-                                <rect key="frame" x="16" y="136" width="118" height="33"/>
+                                <rect key="frame" x="16" y="188" width="118" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                 <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63P-7R-a2e">
-                                <rect key="frame" x="16" y="95" width="343" height="33"/>
+                                <rect key="frame" x="16" y="147" width="343" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-bw-29M">
-                                <rect key="frame" x="16" y="177" width="343" height="33"/>
+                                <rect key="frame" x="16" y="229" width="343" height="33"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="V7p-SR-rGI" firstAttribute="trailing" secondItem="63P-7R-a2e" secondAttribute="trailing" constant="16" id="6y5-C9-7yV"/>
                             <constraint firstItem="V7p-SR-rGI" firstAttribute="trailing" secondItem="4Rd-bw-29M" secondAttribute="trailing" constant="16" id="GhA-mU-z4S"/>
@@ -54,6 +55,9 @@
                             <constraint firstItem="JfI-2b-hvG" firstAttribute="leading" secondItem="V7p-SR-rGI" secondAttribute="leading" constant="16" id="sPT-2A-mma"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V7p-SR-rGI"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="IXp-Zu-neO" appends="YES" id="2qo-QE-8K4"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="4Rd-bw-29M" id="czV-0j-wNX"/>
@@ -61,10 +65,15 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAs-DI-8mB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="IXp-Zu-neO">
+                    <connections>
+                        <action selector="viewSwipped:" destination="eYH-KY-5A5" id="va1-CC-ypO"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2042.4000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Olivander's Wand-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wand" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +112,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="w4S-Fq-B2N"/>
+                    <navigationItem key="navigationItem" title="Olivander's Wand" id="w4S-Fq-B2N">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="vPE-Iv-ZIY"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="svj-3i-6Il" id="71t-ES-vXr"/>
                     </connections>
@@ -117,9 +128,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dkS-uk-xsY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QG1-TF-5Ot">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="QG1-TF-5Ot">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
